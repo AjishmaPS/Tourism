@@ -8,27 +8,37 @@
     <link href="style\index.css" type="text/css" rel="stylesheet">
     <title>LetsGo</title>
 </head>
-<body class="container-fluid">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<body class="container-fluid body">
     
+    <div class="loader loader--hidden d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
      <!-- carousel -->
     
-    <section class="row" >
+    <section class="row">
       <div id="carouselExampleControls" class="carousel slide m-0 p-0 " data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\corousel1.jpg.jpg" class="d-block w-100 vh-100" alt="...">
+            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\corousel1.jpg.jpg" class="d-block vh-lg-100 w-100 " alt="...">
           </div>
           <div class="carousel-item bg-primary">
-            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\carousel3.jpg" class="d-block w-100 vh-100" alt="...">
+            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\carousel3.jpg" class="d-block vh-lg-100 w-100" alt="...">
           </div>
           <div class="carousel-item bg-light">
-            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\carousel2.jpg" class="d-block w-100 vh-100" alt="...">
+            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\carousel2.jpg" class="d-block vh-lg-100 w-100" alt="...">
           </div>
           <div class="carousel-item bg-light">
-            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\carousel5.jpg" class="d-block w-100 vh-100" alt="...">
+            <img src="C:\Users\HP\Desktop\Techolas\Tourism\public\carousel5.png" class="d-block vh-lg-100 w-100" alt="...">
           </div>
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -42,9 +52,13 @@
       
       <!-- navbar -->
 
-      <nav class="navbar navbar-expand-lg py-4 bg-info position-relative z-1 bg-opacity-75 position-fixed">
+      <nav class="navbar navbar-expand-lg py-lg-4 bg-info position-relative z-1 bg-opacity-75 position-fixed">
           <div class="container-fluid">
-                <div class="col-4 text-center">
+                <div class="col-4 text-center brand ">
+                  <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
                   <a class="navbar-brand fst-italic fw-bold  logo" href="index.html" >
                     <span class="material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29
@@ -54,15 +68,11 @@
                          0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
                     </svg>LetsGo</span>
                   </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="ind navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active text-light fw-bold" aria-current="page" href="#">INDIA PACKAGES&nbsp;</a>
+                      <a class="nav-link active text-light fw-bold" aria-current="page" href="#india">INDIA PACKAGES&nbsp;</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link text-light fw-bold" href="#">MIDDLE EAST PACKAGES&nbsp;</a>
@@ -76,7 +86,7 @@
                       <a class="nav-link text-light fw-bold" href="#">CRUISE PACKAGES &nbsp;</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-light fw-bold" href="#">CONTACT US</a>
+                      <a class="nav-link text-light fw-bold" href="#footer">CONTACT US</a>
                     </li>
                   </ul>
                  
@@ -86,10 +96,10 @@
     </section>
       <!-- Indian Packages -->
 
-      <section class="packages row pb-5 vh-100">
+      <section class="packages row pb-5 vh-100" id="india">
           <div class="p-5 d-block-sm">
             <h4 class="text-secondary">Explore India</h4>
-            <blockquote class="text-center m-5 fst-italic d-sm-none">"India is a mosaic of multicultural experiences.With a rich heritage
+            <blockquote class="text-center m-5 fst-italic ">" <strong>India</strong> is a mosaic of multicultural experiences.With a rich heritage
               and myriad <br>attractions, the country is among the most popular tourist destinations <br> in the world. 
               It covers an area of 32, 87,263 sq. km, extending from 
               the <br> snow-covered Himalayan heights to the tropical rain forests of the south." <br>Explore India with LetsGo!!!</blockquote>
@@ -98,7 +108,7 @@
             <div class="card d-inline-block p-0" style="width: 15rem;height:16rem;">
               <a href="..."><img src="C:\Users\HP\Desktop\Techolas\Tourism\public\kashmir.jpg" class="card-img-top h-100" alt="kashmir"></a>
               <div class="info card-body">
-                <p class="card-text text-center fw-bold text-dark">KASHMIR</p>
+                <p class="card-text hotdeal text-center fw-bold text-dark">KASHMIR <span class="ribbon">New</span></p>
                 <br>
                 <div class=" carddetails text-center fw-bold fst-italic">
                   <p class="d-inline text-dark">6 Days & 7 Night</p><br>
@@ -224,7 +234,7 @@
 
       <!-- footer -->
 
-        <section class="footer row" >
+        <section class="footer row" id="footer">
           <div class="p-5 col-3">
             <h6 class="address fw-bold text-secondary">GET IN TOUCH</h6><br>
             <p class=" text-secondary text-wrap fw-bold">Address Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
@@ -291,5 +301,9 @@
           </div>
 
         </section>    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="C:\Users\HP\Desktop\Techolas\Tourism\script\index.js"></script>
 </body>
 </html>

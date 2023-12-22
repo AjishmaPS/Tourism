@@ -1,3 +1,19 @@
+.loader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 100;
+    transition: opacity 0.75s,visibility 0.75s ;
+}
+ .loader--hidden
+{
+    opacity: 0;
+    visibility: hidden;
+}
 .logo
 {
     font-family:Lucida;
@@ -9,34 +25,11 @@
 }
 .moto
 {
-    background-color: rgba(19,170,208,255);
-    
+    background-color: rgba(19,170,208,255); 
 }
 .coro2
 {
     height: 100%;
-}
-.footer
-{
-    background: linear-gradient(to right,white,rgba(19,170,208,255));
-}
-@media only screen and (max-width:431px)and (min-width:200px)
-{
-    .footer{
-        display: block;
-    }
-    .address
-    {
-        text-align: center;
-    }
-}
-@media only screen and (min-width:200px) and (max-width:992px)
-{
-    .ind
-    {
-        background-color: black;
-        opacity: 50%;
-    }
 }
 .cardscroll::-webkit-scrollbar
 {
@@ -61,7 +54,6 @@
 .card:hover::before{
     opacity: 1;
 }
-
 .card .info
 {
     position:absolute;
@@ -83,9 +75,7 @@
 .card:hover .card-text
 {
     opacity: 1;
-    transform: translateY(-30px);
 }
-
 .card-img-top{
     opacity: 0.75;
 }
@@ -101,3 +91,73 @@
 {
     opacity: 0.5;
 }
+.hotdeal
+{
+    position: relative;
+}
+.ribbon
+{
+    width: 60px;
+    font-size: 14px;
+    padding: 4px;
+    position: absolute;
+    right: -25px;
+    top: -35px;
+    text-align: center;
+    border-radius: 25px;
+    transform: rotate(15deg);
+    background-color: #ff9800;
+    color: white;
+}
+.footer
+{
+    background: linear-gradient(to right,white,rgba(19,170,208,255));
+}
+@media only screen and (min-width:200px) and (max-width:431px)
+{
+    .ind
+    {
+        background-color: rgba(19,170,208,255);
+    }
+    .footer
+    {
+        display: block;
+    }
+    .address
+    {
+        text-align: center;
+    }
+    .brand
+    {
+        display: inline;
+    }
+    .carousel img
+    {
+        height: 50vh;
+    }
+    blockquote
+    {
+        visibility: hidden;
+    }
+}
+@media only screen and (min-width:431px) and (max-width:992px)
+{
+    .ind
+    {
+        background-color: rgba(19,170,208,255);
+    }
+    blockquote
+    {
+        visibility: visible;
+    }
+    .carousel img
+    {
+        height: 75vh;
+    }
+    .hamburger
+    {
+        left: 0;
+    }
+    
+}
+
