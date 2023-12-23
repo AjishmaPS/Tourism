@@ -1,12 +1,8 @@
-// window.addEventListener('load',() =>
-// {
-//     const preloaderWrapper=document.querySelector('.loader');
-//     preloaderWrapper.classList.add("loader-hidden");
-//     preloaderWrapper.addEventListener('onload',() =>
-//     {
-//         document.body.removeChild("preloaderWrapper");
-//     })
-// });
+window.addEventListener('load',() =>
+{
+    const loader=document.querySelector('.loader');
+    loader.classList.add("loader--hidden");
+});
 window.addEventListener('offline',() =>
 {
     alert("Sorry!Your internet connection has droped out..");

@@ -9,6 +9,20 @@
     z-index: 100;
     transition: opacity 0.75s,visibility 0.75s ;
 }
+.loader::after
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top-color: rgba(19,170,208,255);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+    from { transform: rotate(0turn) }
+    to { transform: rotate(1turn) }
+}
  .loader--hidden
 {
     opacity: 0;
@@ -27,10 +41,6 @@
 {
     background-color: rgba(19,170,208,255); 
 }
-.coro2
-{
-    height: 100%;
-}
 .cardscroll::-webkit-scrollbar
 {
     display: none;
@@ -39,22 +49,29 @@
 {
     background: linear-gradient(to right,white,rgba(19,170,208,255));
 }
-.card
+.cards
 {
     position:relative;
     display:flex;
     box-shadow:0px 7px 10px rgba(0,0,0,0.5);
     transition:0.5s ease-in-out;
+    width: 15rem;
+    height: 16rem;
 }
-.card:hover
+.cardss
+{
+    width: 8rem;
+    height: 4rem;
+}
+.cards:hover
 {
     transform:translateY(20px);
     box-shadow: 4px 4px 4px rgb(236, 179, 242);
 }
-.card:hover::before{
+.cards:hover::before{
     opacity: 1;
 }
-.card .info
+.cards .info
 {
     position:absolute;
     z-index: 1;
@@ -72,7 +89,7 @@
 {
     opacity: 0;
 }
-.card:hover .card-text
+.cards:hover .card-text
 {
     opacity: 1;
 }
@@ -83,11 +100,11 @@
 {
     opacity: 0;
 }
-.card:hover .carddetails
+.cards:hover .carddetails
 {
     opacity: 1;
 }
-.card:hover .card-img-top
+.cards:hover .card-img-top
 {
     opacity: 0.5;
 }
@@ -137,8 +154,40 @@
     }
     blockquote
     {
-        visibility: hidden;
+       display: none;
     }
+    .packages 
+    {
+        height: 50vh;
+    }
+    .cards
+    {
+        width: 5rem;
+        height: 6rem;
+        margin: 1px;
+    }
+   .carddetails
+   {
+    display: none;
+   }
+   .card-text
+   {
+    font-size:6px;
+   }
+   .cardss
+   {
+    width: 4rem;
+    height: 2rem;
+   }
+   .cardss .info
+   {
+    font-size: 7px;
+   }
+   .ribbon
+   {
+    width: 30px;
+    font-size: 7px;
+   }
 }
 @media only screen and (min-width:431px) and (max-width:992px)
 {
@@ -152,11 +201,15 @@
     }
     .carousel img
     {
-        height: 75vh;
+        height: 50vh;
     }
     .hamburger
     {
         left: 0;
+    }
+    .packages
+    {
+        height: 60vh;
     }
     
 }
