@@ -1,0 +1,65 @@
+body
+{
+    background-image: url(../public/searchbg.jpg);
+}
+.logo
+{
+    font-family: 'Satisfy', cursive;
+    font-size:25px;
+}
+.searchbar
+{
+    border-style: solid;
+    border-color: greenyellow;
+    border-width: 3px;
+    border-radius: 16px;
+}
+.places
+{
+    margin-left: 200px;
+    padding-top: 50px;
+}
+.places li
+{
+    font-size: large;
+}
+.places li:hover
+{
+    border: solid;
+    border-radius: 25px;
+    border-color: greenyellow;
+    transition: transform 1s;
+}
+@media only screen and (min-width:200px) and (max-width:431px)
+{
+    .places
+    {
+        margin-left: 0;
+    }
+    .searchbar
+    {
+        width: 100%;
+    }
+}
+@media only screen and (min-width:431px) and (max-width:992px)
+{
+    .places
+    {
+        margin-left: 100px;
+    }
+    .searchbar
+    {
+        width: 75%;
+    }
+}
+@media only screen and (min-width:993px) and (max-width:1600px)
+{
+    .places
+    {
+        margin-left: 200px;
+    }
+    .searchbar
+    {
+        width: 50%;
+    }
+}
